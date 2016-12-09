@@ -1,44 +1,365 @@
- body{
+body {
     padding: 0;
     min-width: 1226px;
-     margin:0 auto;
-     width:100%;
-     position: absolute;
-     overflow: auto;
-     text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    overflow: auto;
+    text-align: center;
 }
-.top-container{
-    background: #333333 ;
-    width:100%;
+.page-width{
+    width:1226px;;
+
 }
-.top-nav{
+li{
+    list-style: none;
+}
+.top-nav {
     min-width: 1226px;
-    margin:0 auto;
+    background: #333333;
+    margin: 0 auto;
     height: 40px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
-.top-nav .left{
+
+.top-nav .left {
     float: left;
 }
 
-.top-nav .left a{
+.top-nav .left a, .right a, .right-right a {
     font-size: 12px;
     color: #b0b0b0;
     line-height: 40px;
     align-items: center;
     text-decoration: none;
 }
-.top-nav .left a:hover{
+
+.top-nav .left a:hover {
     color: #fff;
 }
-.top-nav .left span{
+
+.top-nav .left span {
     color: #424242;
     margin: 0 .5em;
 }
 
-.top-nav ul li a:hover{
+.top-nav ul li a:hover {
     color: white;
 }
-.top-nav ul{
+
+.top-nav ul {
     list-style: none;
+}
+
+.left {
+    margin-left: 100px;
+}
+
+.right a {
+    margin-left: 10px;
+    margin-right: 10px;;
+}
+
+.icon {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.background-color{
+    background-color: #FF6700;
+}
+.icon-cart:before {
+    content: "\e698";
+}
+
+.right .cart {
+    font-family: "iconfont", serif !important;
+    font-size: 22px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.right-right {
+    float: left;
+}
+
+.right div {
+    margin-right: 260px;
+    margin-left: 10px;
+    text-align: center;
+    float: right;
+    background-color: #3E3E3E;
+    width: 150px;
+    height: 100%;
+}
+
+.right div i {
+    float: left;
+    padding: 12px 0px 12px 30px;
+    color: #B0B0B0;
+}
+
+.right div span {
+    float: left;
+    margin-top: 8px;
+    text-align: center;
+    color: #B0B0B0;
+    margin-left: 5px;
+    background-color: #3E3E3E;
+}
+
+.right div:hover + .right-menu, .right-menu {
+    display: block;
+    -webkit-animation: myfirst .5s;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.right div:hover {
+    background-color: white;
+}
+
+.right div span:hover {
+    background-color: white;
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    0% {
+        background: white;
+        height: 0px;
+    }
+    /*25%  {background:white; left:0px; top:-100px;}*/
+    /*50%  {background:white; left:0px; top:-50px;}*/
+    /*75%  {background:white; left:0px; top:-30px;}*/
+    100% {
+        background: white;
+        height: 70px;
+    }
+}
+
+.right-menu {
+    position: absolute;
+    display: none;
+    float: right;
+    width: 250px;
+    height: 70px;
+    text-align: center;
+    padding-top: 30px;
+    z-index: 100;
+    right:0px;
+    margin-right: 260px;
+    box-shadow: 0px 1px 1px 1px #ccc;
+    background-color: #fff;
+}
+
+.right-menu a {
+    color: #000;
+    position: relative;
+    font-size: 14px;
+
+}
+
+
+/*asdlkald*/
+.top-top{
+    min-width: 1224px;
+    height: 100px;
+    position: relative;
+    background-color: white;
+}
+.top-top img{
+    margin-left: 100px;
+    float: left;
+    margin-top: 20px;
+}
+.top-top-nav{
+    width: 850px;
+    vertical-align: middle;
+    text-align: center;
+    height:100px;
+    float: left;
+    position: absolute;
+    left:250px;
+}
+.top-top-nav span{
+    float: left;
+    list-style: none;
+    position: relative;
+    vertical-align: middle;
+    margin:20px;
+    margin-top: 30px;
+    text-align: center;
+    color: #fffdef;
+}
+.top-top-nav span{
+   color: black;
+    cursor: pointer;
+}
+.top-top-nav span:hover   .dropdown-menu  {
+    background-color: #FF6700;
+}
+.top-top-nav-span1:hover {
+    background-color: red;
+}
+/*.top-top-nav span:hover{*/
+   /*color: #FF6700;*/
+/*}*/
+
+/*banner*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 每个checked，只有一个内容块被设置为显示*/
+#label01:checked ~ #content li:nth-child(1) {
+    display:block;
+}
+
+#label02:checked ~ #content li:nth-child(2) {
+    display:block;
+}
+
+#label03:checked ~ #content li:nth-child(3) {
+    display:block;
+}
+#label04:checked ~ #content li:nth-child(4) {
+    display:block;
+}
+/* 其他则设置为隐藏*/
+
+#label01:checked ~ #content li:nth-child(n+2) {
+    display:none;
+}
+
+#label02:checked ~ #content li:nth-child(1),
+#label02:checked ~ #content li:nth-child(4),
+#label02:checked ~ #content li:nth-child(3) {
+    display:none;
+}
+
+#label03:checked ~ #content li:nth-child(1),
+#label03:checked ~ #content li:nth-child(2),
+#label03:checked ~ #content li:nth-child(4)
+
+{
+    display:none;
+}
+
+#label04:checked ~ #content li:nth-child(1),
+#label04:checked ~ #content li:nth-child(2),
+#label04:checked ~ #content li:nth-child(3) {
+    display:none;
+}
+/* 隐藏Input按钮，它只是跳板嘛*/
+#label01, #label02, #label03 ,#label04{
+    display: none;
+}
+
+.bg1 {
+    background-image: url("/xiaomi/img/mi-banner/banner-1.jpg");
+    background-size: 100%;
+}
+
+.bg2 {
+    background-image: url("/xiaomi/img/mi-banner/banner-2.jpg");
+    background-size: 100%;
+}
+
+.bg3 {
+    background-image: url("/xiaomi/img/mi-banner/banner-3.jpg");
+    background-size: 100%;
+}
+.bg4{
+    background-image: url("/xiaomi/img/mi-banner/banner-4.jpg");
+    background-size: 100%;
+}
+
+.middle-left {
+    height:450px;
+    border:1px solid #b5bfdc;
+    overflow: hidden;
+    margin-left: 100px;
+
+}
+#opt {
+    width:100px;
+    position: absolute;
+    z-index:2;
+    margin-left: 1111px;
+    margin-top: 400px;
+}
+
+#opt label {
+    float:left;
+    height:100%;
+    margin-right: 10px;
+    text-align:center;
+    font:18px/40px MicroSoft YaiHei;
+    color:#fff;
+    cursor: pointer;
+}
+
+#content {
+    width:100%;
+    height:100%;
+}
+
+#content li {
+    float:right;
+    width:100%;
+    position: relative;
+
+    height:100%;
+}
+
+
+#opt label:hover{
+    background-color: #b5bfdc;
+}
+
+/*banner end*/
+
+.middle-left-left{
+    width:234px;
+    height:450px;
+    top:140px;
+    left:100px;
+    opacity: 0.4;
+    position: absolute;
+    background-color: #5C4330;
+    vertical-align: middle;
+}
+.middle{
+
+}
+.middle-left-left li{
+    background-color: #5C4330;
+    width:100%;
+    height:42px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    line-height: 42px;
+}
+.middle-left-left ul{
+    margin-top:10px;
+}
+.middle-left-left li:hover{
+    background-color: #FF6700;
+}
+/*整页下拉菜单*/
+.dropdown-menu{
+    height:200px;
+    top:100px;
+    width:100%;
+    position: absolute;
+    z-index: 11;
+    display: block;
+    background-color: #55a532;
+    margin-left: 100px;
 }
